@@ -1,0 +1,20 @@
+{
+    "name": "devngugi/bush-grapes-cms",
+    "description": "A Proof of Concept CMS made entirely from the ground up using OOP-PHP, including a custom, functional ORM following the MVC pattern, DI and other design patterns.",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Devngugi\\BushGrape\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "devngugi",
+            "email": "philemonngugi18@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^7.2"
+    }
+}
