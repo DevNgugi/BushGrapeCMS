@@ -1,7 +1,6 @@
 <?php
 
 namespace Devngugi\BushGrape\BushGrape\Routing;
-use Exception;
 class Router
 {
     private array $routes=[];
@@ -41,6 +40,14 @@ class Router
         return $this->addRoute('POST', $path, $controller, $action);
     }
 
+    public function patch(string $path, string $controller, string $action): self {
+        return $this->addRoute('PATCH', $path, $controller, $action);
+    }
+    public function delete(string $path, string $controller, string $action): self {
+        return $this->addRoute('DELETE', $path, $controller, $action);
+    }
+
+
     public function handle() {
         // Get the current URI and HTTP method
         $uri = $_SERVER['REQUEST_URI'];
@@ -70,7 +77,5 @@ class Router
             echo "404 Not Found";
         }
     }
-
-
 
 }
