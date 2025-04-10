@@ -1,7 +1,7 @@
 <?php
 
-namespace Devngugi\BushGrape\Controllers;
-use Devngugi\BushGrape\Framework\Response;
+namespace Devngugi\WildGrape\Controllers;
+use Devngugi\WildGrape\Framework\Response;
 
 class HomeController {
     public function index() 

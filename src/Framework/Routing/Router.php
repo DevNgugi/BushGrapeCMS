@@ -1,6 +1,6 @@
 <?php
 
-namespace Devngugi\BushGrape\Framework\Routing;
+namespace Devngugi\WildGrape\Framework\Routing;
 
 use Exception;
 

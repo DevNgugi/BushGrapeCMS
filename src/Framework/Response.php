@@ -1,6 +1,6 @@
 <?php
 
-namespace Devngugi\BushGrape\Framework;
+namespace Devngugi\WildGrape\Framework;
 
 class Response
 {

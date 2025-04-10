@@ -1,7 +1,7 @@
 <?php
 
-use Devngugi\BushGrape\Framework\Routing\Router;
-use Devngugi\BushGrape\Controllers\HomeController;
+use Devngugi\WildGrape\Framework\Routing\Router;
+use Devngugi\WildGrape\Controllers\HomeController;
 
 $router = new Router();
 

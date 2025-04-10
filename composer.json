@@ -1,11 +1,11 @@
 {
-    "name": "devngugi/bush-grapes-cms",
-    "description": "A Proof of Concept CMS made entirely from the ground up using OOP-PHP, including a custom, functional ORM following the MVC pattern, DI and other design patterns.",
+    "name": "devngugi/wild-grape",
+    "description": "A Proof of Concept LMS made entirely from the ground up using OOP-PHP, including a custom, functional ORM following the MVC pattern, DI and other design patterns.",
     "type": "project",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Devngugi\\BushGrape\\": "src/"
+            "Devngugi\\WildGrape\\": "src/"
         }
     },
     "authors": [

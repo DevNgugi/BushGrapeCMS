@@ -1,6 +1,6 @@
 <?php
 
-use Devngugi\BushGrape\Framework\System;
+use Devngugi\WildGrape\Framework\System;
 
 
 require_once __DIR__ . '/../vendor/autoload.php';
