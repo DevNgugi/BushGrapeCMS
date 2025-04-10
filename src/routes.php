@@ -5,6 +5,7 @@ use Devngugi\BushGrape\Controllers\HomeController;
 
 $router = new Router();
 
-return $router
-    ->get('/', HomeController::class, 'index')
-    ->post('/', HomeController::class, 'index');
+$router->addRoute('GET','/',HomeController::class,'index');
+$router->addRoute('POST','/',HomeController::class,'post');
+
+return $router;

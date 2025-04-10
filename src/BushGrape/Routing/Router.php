@@ -1,6 +1,9 @@
 <?php
 
 namespace Devngugi\BushGrape\BushGrape\Routing;
+
+use Exception;
+
 class Router
 {
     private string $id;
@@ -36,34 +39,13 @@ class Router
         return $this->routes;
     }
 
-    public function resolve(string $method, string $path): ?Route {
-        return $this->routes[strtoupper($method)][$path] ?? null;
-    }
-
-
-    public function get(string $path, string $controller, string $action): self {
-        return $this->addRoute('GET', $path, $controller, $action);
-    }
-
-    public function post(string $path, string $controller, string $action): self {
-        return $this->addRoute('POST', $path, $controller, $action);
-    }
-
-    public function patch(string $path, string $controller, string $action): self {
-        return $this->addRoute('PATCH', $path, $controller, $action);
-    }
-    public function delete(string $path, string $controller, string $action): self {
-        return $this->addRoute('DELETE', $path, $controller, $action);
-    }
-
-
     public function handle() {
             // Get the current URI and HTTP method
         $uri = $_SERVER['REQUEST_URI'];
         $method = $_SERVER['REQUEST_METHOD'];
 
         // Try to resolve the route
-        $route = $this->resolve($method, $uri);
+        $route = $this->routes[strtoupper($method)][$uri] ?? null;
 
         if ($route) {
             // If route found, instantiate the controller
@@ -76,10 +58,10 @@ class Router
                     // Call the action method on the controller
                     $controller->$action();
                 } else {
-                    echo "Action {$action} not found in {$controllerClass}.";
+                    throw new Exception ("Action {$action} not found in {$controllerClass}.");
                 }
             } else {
-                echo "Controller {$controllerClass} not found.";
+                throw new Exception( "Controller {$controllerClass} not found.");
             }
         } else {
             // Handle 404 if route not found
