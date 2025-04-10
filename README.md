@@ -7,6 +7,7 @@ A Proof of Concept CMS made entirely from the ground up using OOP-PHP, including
 
 # third party packages we will use:
 - symfony/var-dumper  : for formatting our data dumps
+- vlucas/phpdotenv - reading env files
   
 
 

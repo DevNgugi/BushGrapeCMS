@@ -3,6 +3,15 @@
 namespace Devngugi\BushGrape\BushGrape\Routing;
 class Router
 {
+    private string $id;
+
+    public function __construct() {
+        $this->id = uniqid('router_', true);
+    }
+
+    public function getId(): string {
+        return $this->id;
+    }
     private array $routes=[];
     
 
@@ -49,7 +58,7 @@ class Router
 
 
     public function handle() {
-        // Get the current URI and HTTP method
+            // Get the current URI and HTTP method
         $uri = $_SERVER['REQUEST_URI'];
         $method = $_SERVER['REQUEST_METHOD'];
 
