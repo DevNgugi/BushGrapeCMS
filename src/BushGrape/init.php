@@ -36,6 +36,12 @@ set_exception_handler(function ($exception) {
     // Get additional request info
     $requestUri = $_SERVER['REQUEST_URI'];
     $requestMethod = $_SERVER['REQUEST_METHOD'];
+    $requestHeaders = getallheaders(); // Get all headers
+    $requestCookies = $_COOKIE; // Get all cookies
+    $requestQueryParams = $_GET; // Get all query parameters
+    $requestBody = file_get_contents('php://input'); // Get raw POST body content
+    $serverVariables = $_SERVER; // Get all server variables
+
 
     // Extract variables for use in the template
     extract([
@@ -44,7 +50,12 @@ set_exception_handler(function ($exception) {
         'exceptionLine' => $exceptionLine,
         'stackTrace' => $stackTrace,
         'requestUri' => $requestUri,
-        'requestMethod' => $requestMethod
+        'requestMethod' => $requestMethod,
+        'requestHeaders' => $requestHeaders,
+        'requestCookies' => $requestCookies,
+        'requestQueryParams' => $requestQueryParams,
+        'requestBody' => $requestBody,
+        'serverVariables' => $serverVariables
     ]);
 
     require_once __DIR__ . '/views/error.php';

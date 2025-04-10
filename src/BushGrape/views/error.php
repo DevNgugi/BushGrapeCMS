@@ -61,7 +61,23 @@
             <h4>Additional Information</h4>
             <p><strong>Request URI:</strong> <?= htmlspecialchars($requestUri) ?></p>
             <p><strong>Request Method:</strong> <?= htmlspecialchars($requestMethod) ?></p>
+
+            <h5>Request Headers:</h5>
+            <pre><?= htmlspecialchars(print_r($requestHeaders, true)) ?></pre>
+
+            <h5>Request Cookies:</h5>
+            <pre><?= htmlspecialchars(print_r($requestCookies, true)) ?></pre>
+
+            <h5>Request Query Parameters:</h5>
+            <pre><?= htmlspecialchars(print_r($requestQueryParams, true)) ?></pre>
+
+            <h5>Request Body (if POST request):</h5>
+            <pre><?= htmlspecialchars($requestBody) ?></pre>
+
+            <h5>Server Variables:</h5>
+            <pre><?= htmlspecialchars(print_r($serverVariables, true)) ?></pre>
         </div>
     </div>
 </body>
+
 </html>
