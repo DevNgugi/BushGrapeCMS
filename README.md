@@ -1,4 +1,4 @@
-# oop-php-cms
+# BushGrapeCMS
 A Proof of Concept CMS made entirely from the ground up using OOP-PHP, including a custom, functional ORM following the MVC patterns, DI and other design patterns.
 
 
