@@ -1,6 +1,6 @@
 <?php
 
-use Devngugi\BushGrape\BushGrape\Routing\Router;
+use Devngugi\BushGrape\Framework\Routing\Router;
 use Devngugi\BushGrape\Controllers\HomeController;
 
 $router = new Router();

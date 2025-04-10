@@ -1,17 +1,17 @@
 <?php
 
 namespace Devngugi\BushGrape\Controllers;
-use Devngugi\BushGrape\BushGrape\Response;
+use Devngugi\BushGrape\Framework\Response;
 
 class HomeController {
     public function index() 
      
         {
-            Response::Json(['get method resolved'],200);
+            Response::Json([],400);
         }
 
     public function post(){
-        Response::Json(['Post method resolved'],200);
+        Response::Json([],200);
     }
     
 }

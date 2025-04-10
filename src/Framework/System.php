@@ -1,7 +1,7 @@
 <?php
-namespace Devngugi\BushGrape\BushGrape;
+namespace Devngugi\BushGrape\Framework;
 
-use Devngugi\BushGrape\BushGrape\Routing\Router;
+use Devngugi\BushGrape\Framework\Routing\Router;
 
 class System {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Devngugi\BushGrape\BushGrape\Routing;
+namespace Devngugi\BushGrape\Framework\Routing;
 
 
 class Route {

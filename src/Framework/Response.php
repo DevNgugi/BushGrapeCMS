@@ -1,12 +1,12 @@
 <?php
 
-namespace Devngugi\BushGrape\BushGrape;
+namespace Devngugi\BushGrape\Framework;
 
 class Response
 {
 
-    public static function send(array $data = [], int $statusCode = 200): void
-    {
+    public static function send(array $data, int $statusCode): void
+    {   
         http_response_code($statusCode);
         header('Content-Type: application/json');
         echo json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);

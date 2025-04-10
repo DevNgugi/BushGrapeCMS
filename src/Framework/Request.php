@@ -1,5 +1,5 @@
 <?php
-namespace Devngugi\BushGrape\BushGrape;
+namespace Devngugi\BushGrape\Framework;
 
 class Request
 {

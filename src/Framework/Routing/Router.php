@@ -1,6 +1,6 @@
 <?php
 
-namespace Devngugi\BushGrape\BushGrape\Routing;
+namespace Devngugi\BushGrape\Framework\Routing;
 
 use Exception;
 
@@ -65,7 +65,7 @@ class Router
             }
         } else {
             // Handle 404 if route not found
-            echo "404 Not Found";
+            throw new Exception( "404 Not Found");
         }
     }
 

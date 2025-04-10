@@ -3,7 +3,7 @@ define('ROOT_PATH', realpath(__DIR__ . '/../../'));
 require_once __DIR__ . '/utils/parseBool.php';
 require_once __DIR__ . '/config/error.php';
 
-use Devngugi\BushGrape\BushGrape\Routing\Router;
+use Devngugi\BushGrape\Framework\Routing\Router;
 use Dotenv\Dotenv;
 
 // load .env file variables globally
